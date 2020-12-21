@@ -7,13 +7,11 @@ var orderIngredients = order.getElementsByClassName('order-ingredients')[0];
 
 var ingredient = orderIngredients.getElementsByTagName('input');
 
-var coupon = document.getElementById('coupon').value;
-
 var submit = order.getElementsByTagName('button')[0];
 
 var choice;
 
-var discount;
+var coupon;
 
 var totalPrice = document.getElementById('price');
 
@@ -31,12 +29,16 @@ submit.addEventListener("click", function() {
       }
     }
 
-    if (coupon = 'M2ERRY0CHR2ISTM0AS') {
-      discount = choice * 20 / 100;
-      choice = choice - discount;
+    coupon = document.getElementById('coupon').value;
+
+    if (coupon === 'M2ERRY0CHR2ISTM0AS') {
+      coupon = choice * 20 / 100;
+      choice = choice - coupon;
     }
 
     totalPrice.innerText = choice;
+
+
   }
 }
 );
