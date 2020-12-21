@@ -1,0 +1,10 @@
+main {
+  width: 800px;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.order>* {
+  margin: 25px;
+}
