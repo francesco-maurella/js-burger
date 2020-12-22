@@ -11,44 +11,51 @@ var submit = order.getElementsByTagName('button')[0];
 
 var totalPrice = document.getElementById('price');
 
-// Undefined Vars for the "click" operation
+// Undefined Vars - use them in the "Button after-click function"
 var choice;
 
 var checked;
 
 var coupon;
 
-// onClick operation
+// Button after-click function
 submit.addEventListener("click", function() {
-  // Verify IF the order has a name
+
+  // verify IF the order has a name
   if (!orderName.value) {
     alert('Name your Burger, please!');
   } else {
-    // Assign value at Undefined vars
+
+    // assign value at Undefined vars, for reset them after every click
     checked = [];
     choice = 0;
-    // Checked ingredients
+
+    // checked ingredients
     for (var i = 0; i < ingredient.length; i++) {
       if (ingredient[i].checked) {
-        checked.push(ingredient[i].value); // count ingredients
-        choice += parseInt(ingredient[i].value); // sum the ingredients value
+        // count ingredients - pushing their values into "checked" array
+        checked.push(ingredient[i].value);
+        // sum ingredient values
+        choice += parseInt(ingredient[i].value);
       }
     }
-    // Verify IF ingredients are 2 or more
+    // verify IF ingredients are 2 or more
     if (checked.length < 2) {
-      alert('Choice 2 or more ingredients');
+      alert('Choose 2 or more ingredients');
     } else {
       // for (var i = 0; i < checked.length; i++) {
       //   choice += parseInt(checked[i]);
       // }
 
-      // Verify IF coupon have used
+      // assign coupon var value here, for refresh it, after every click
       coupon = document.getElementById('coupon');
+      // verify coupon code
       if (coupon.value === 'M2ERRY0CHR2ISTM0AS') {
         coupon = choice * 20 / 100;
         choice = choice - coupon;
       }
-      // Print the result
+
+      // print the result
       totalPrice.innerText = choice;
     }
   }
