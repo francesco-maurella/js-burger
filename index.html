@@ -13,42 +13,80 @@
     <!-- WRAPPER Container -->
     <div class="wrapper">
 
-      <!-- HEADER (Title, logo) -->
-      <header class="flx">
-        <div class="title">
+      <!-- HEADER (Title & logo) -->
+      <header class="flx al-cntr space-btw pdd-35">
+        <div class="title txt-bld">
           Create your Burger
         </div>
         <div class="logo">
           <img src="img/00-logo.png" alt="Burger">
         </div>
       </header>
-      <!-- / HEADER (Title, logo) -->
+      <!-- / HEADER (Title & logo) -->
 
       <!-- MAIN BODY (Contents) -->
-      <main>
-        <div class="order">
-          <input type="text" name="" value="" placeholder="Name Your Burger">
-          <br>
-          <div class="order-ingredients">
-            <label for=""></label>
+      <main class="pdd-35">
+
+        <!-- Order name -->
+        <div class="order-name">
+          <input type="text" value="" placeholder="Name Your Burger">
+        </div>
+        <!-- / Order name -->
+        <!-- Order ingredients list -->
+        <div class="order-ingredients flx space-btw">
+          <h2>Ingredients</h2>
+          <div class="flx al-cntr space-btw">
+            <img src="img/cheese.svg" alt="ingredients">
+            <label>Cheese</label>
             <input type="checkbox" name="cheese" value="3">
-            <input type="checkbox" name="egg" value="4">
-            <input type="checkbox" name="mustard" value="2">
+          </div>
+          <div class="flx al-cntr space-btw">
+            <img src="img/tomato.svg" alt="ingredients">
+            <label>Tomato</label>
             <input type="checkbox" name="tomato" value="3">
+          </div>
+          <div class="flx al-cntr space-btw">
+            <img src="img/egg.svg" alt="ingredients">
+            <label>Egg</label>
+            <input type="checkbox" name="egg" value="4">
+          </div>
+          <div class="flx al-cntr space-btw">
+            <img src="img/lettuce.svg" alt="ingredients">
+            <label>Lettuce</label>
             <input type="checkbox" name="lettuce" value="2">
+          </div>
+          <div class="flx al-cntr space-btw">
+            <img src="img/mustard.svg" alt="ingredients">
+            <label>Mustard</label>
+            <input type="checkbox" name="mustard" value="2">
+          </div>
+          <div class="flx al-cntr space-btw">
+            <img src="img/ketchup.svg" alt="ingredients">
+            <label>Ketchup</label>
             <input type="checkbox" name="ketuchup" value="2">
           </div>
-          <br>
-          <input id="coupon" type="text" name="" value="M2ERRY0CHR2ISTM0AS">
-          <br>
-          <button type="submit" name="button">calculate</button>
         </div>
+        <!-- / Order ingredients list -->
+        <!-- Coupon code -->
+          <div class="order-coupon">
+            <label for="">Discount Coupon</label>
+            <input id="coupon" type="text" name="" value="M2ERRY0CHR2ISTM0AS">
+          </div>
+          <!-- / Coupon code -->
+          <!-- Order submit button -->
+          <div class="order-submit flx">
+            <input class="txt-bld" type="submit" name="button" value="calculate">
+          </div>
+          <!-- / Order submit button -->
       </main>
       <!-- / MAIN BODY (Contents) -->
 
       <!-- FOOTER -->
-      <footer class="">
-        <div id="price"></div>
+      <footer class="flx al-cntr space-btw pdd-35 txt-bld">
+        <div id="user">
+          Your price
+        </div>
+        <div id="price">Eur. 8</div>
       </footer>
       <!-- FOOTER -->
     </div>

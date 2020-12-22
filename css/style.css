@@ -12,27 +12,45 @@ body {
 .flx {
   display: flex;
 }
+
+.pdd-35 {
+  padding: 35px;
+}
+
+.al-cntr {
+  align-items: center;
+}
+
+.space-btw {
+  justify-content: space-between;
+}
+
+.txt-bld {
+  font-weight: bold;
+}
+
 /* / Utility CSS */
 
 .wrapper {
   width: 50vw;
   height: 100vh;
   font-family: 'Verdana';
-  font-size: 16px;
+  font-size: 15px;
 }
 
-/* HEADER (Title, logo) */
+.wrapper input, .wrapper input:focus {
+  border: 0;
+  outline: none;
+}
+
+/* HEADER (Title & logo) */
 header {
   height: 140px;
-  padding: 35px;
   background-color: #FDBB40;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .title {
   font-size: 1.8em;
-  font-weight: bold;
 }
 
 .logo {
@@ -45,11 +63,72 @@ main {
   background-color: #FFF;
   height: calc(100% - 240px);
 }
+
+main > * {
+  margin-bottom: 25px;
+}
+
+/* Order name */
+.order-name>input {
+  font-size: 1.65em;
+}
+/* / Order name */
+
+/* Order ingredients */
+.order-ingredients {
+  width: 75%;
+  flex-wrap: wrap;
+}
+
+.order-ingredients>h2 {
+  width: 100%;
+  font-size: 1.2em;
+}
+
+.order-ingredients >*{
+  width: 35%;
+  margin-bottom: 16px;
+}
+
+.order-ingredients img{
+  max-height: 52px;
+}
+/* / Order ingredients */
+
+/* Coupon code */
+.order-coupon {
+  font-size: 0.9em;
+}
+
+.order-coupon input {
+  width: 75%;
+  background-color: #FFF5E2;
+  padding: 8px;
+  border-radius: 5px;
+}
+/* / Coupon code */
+
+/* Order submit button */
+.order-submit {
+  justify-content: center;
+}
+
+.order-submit input {
+  background-color: #FDBB40;
+  font-size: 1.2em;
+  border-radius: 5px;
+  padding: 18px;
+}
+/* / Order submit button */
+
+
 /* / MAIN BODY (Contents) */
 
 /* FOOTER */
 footer {
-  background-color: #D33359;
   height: 100px;
+  background-color: #D33359;
+  color: #FFF;
+  font-size: 1.2em;
 }
 /* FOOTER */
