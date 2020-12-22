@@ -1,10 +1,41 @@
-main {
-  width: 800px;
-  height: 100%;
-  margin: auto;
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.order>* {
-  margin: 25px;
+body {
+  background-color: #FFF5E2;
 }
+
+/* Utility CSS */
+.flx {
+  display: flex;
+}
+/* / Utility CSS */
+
+.wrapper {
+  width: 50vw;
+  height: 100vh;
+}
+
+/* HEADER (Title, logo) */
+header {
+  background-color: #FDBB40;
+  height: 140px;
+}
+/* / HEADER (Title, logo) */
+
+/* MAIN BODY (Contents) */
+main {
+  background-color: #FFF;
+  height: calc(100% - 240px)
+}
+/* / MAIN BODY (Contents) */
+
+/* FOOTER */
+footer {
+  background-color: #D33359;
+  height: 100px;
+}
+/* FOOTER */
