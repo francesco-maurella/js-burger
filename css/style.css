@@ -45,7 +45,7 @@ body {
 
 /* HEADER (Title & logo) */
 header {
-  height: 140px;
+  height: 120px;
   background-color: #FDBB40;
 }
 
@@ -55,13 +55,18 @@ header {
 
 .logo {
   transform: translate(50%, 10%);
+  max-width: 228px;
+}
+
+.logo img{
+  max-width: 100%;
 }
 /* / HEADER (Title, logo) */
 
 /* MAIN BODY (Contents) */
 main {
   background-color: #FFF;
-  height: calc(100% - 240px);
+  height: calc(100% - 200px);
 }
 
 main > * {
@@ -82,16 +87,45 @@ main > * {
 
 .order-ingredients>h2 {
   width: 100%;
+  margin-bottom: 25px;
   font-size: 1.2em;
 }
 
-.order-ingredients >*{
+.order-ingredients >.flx{
   width: 35%;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 
 .order-ingredients img{
   max-height: 52px;
+}
+
+.checkbox {
+  background-color: #D33359;
+  position: relative;
+  height: 14px;
+}
+
+/* .checkbox:after {
+  background-color: #E65073;
+} */
+
+.fa-check {
+  font-size: 1.3em;
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.checkbox>input:checked + .fa-check{
+  visibility: visible;
+}
+
+.checkbox>input {
+  opacity: 0;
+  cursor: pointer;
 }
 /* / Order ingredients */
 
@@ -126,7 +160,7 @@ main > * {
 
 /* FOOTER */
 footer {
-  height: 100px;
+  height: 80px;
   background-color: #D33359;
   color: #FFF;
   font-size: 1.2em;
