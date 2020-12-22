@@ -14,57 +14,48 @@
     <div class="wrapper">
 
       <!-- HEADER (Title, logo) -->
-      <header>
-        <div class="">
-
+      <header class="flx">
+        <div class="title">
+          Create your Burger
+        </div>
+        <div class="logo">
+          <img src="img/00-logo.png" alt="Burger">
         </div>
       </header>
       <!-- / HEADER (Title, logo) -->
 
       <!-- MAIN BODY (Contents) -->
-      <main class="">
-        <div class="">
-
+      <main>
+        <div class="order">
+          <input type="text" name="" value="" placeholder="Name Your Burger">
+          <br>
+          <div class="order-ingredients">
+            <label for=""></label>
+            <input type="checkbox" name="cheese" value="3">
+            <input type="checkbox" name="egg" value="4">
+            <input type="checkbox" name="mustard" value="2">
+            <input type="checkbox" name="tomato" value="3">
+            <input type="checkbox" name="lettuce" value="2">
+            <input type="checkbox" name="ketuchup" value="2">
+          </div>
+          <br>
+          <input id="coupon" type="text" name="" value="M2ERRY0CHR2ISTM0AS">
+          <br>
+          <button type="submit" name="button">calculate</button>
         </div>
       </main>
       <!-- / MAIN BODY (Contents) -->
 
       <!-- FOOTER -->
       <footer class="">
-        <div class="">
-
-        </div>
+        <div id="price"></div>
       </footer>
       <!-- FOOTER -->
     </div>
     <!-- / WRAPPER Container -->
 
 
-    
-
-    <!-- Temporary Code for script -->
-    <div class="order">
-      <input type="text" name="" value="" placeholder="Name Your Burger">
-      <br>
-      <div class="order-ingredients">
-        <label for=""></label>
-        <input type="checkbox" name="cheese" value="3">
-        <input type="checkbox" name="egg" value="4">
-        <input type="checkbox" name="mustard" value="2">
-        <input type="checkbox" name="tomato" value="3">
-        <input type="checkbox" name="lettuce" value="2">
-        <input type="checkbox" name="ketuchup" value="2">
-      </div>
-      <br>
-      <input id="coupon" type="text" name="" value="M2ERRY0CHR2ISTM0AS">
-      <br>
-      <button type="submit" name="button">calculate</button>
-    </div>
-
-    <div id="price"></div>
-
     <script src="js/script.js" charset="utf-8"></script>
-    <!-- / Temporary Code for script -->
 
   </body>
 </html>

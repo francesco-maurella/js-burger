@@ -17,19 +17,33 @@ body {
 .wrapper {
   width: 50vw;
   height: 100vh;
+  font-family: 'Verdana';
+  font-size: 16px;
 }
 
 /* HEADER (Title, logo) */
 header {
-  background-color: #FDBB40;
   height: 140px;
+  padding: 35px;
+  background-color: #FDBB40;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.logo {
+  transform: translate(50%, 10%);
 }
 /* / HEADER (Title, logo) */
 
 /* MAIN BODY (Contents) */
 main {
   background-color: #FFF;
-  height: calc(100% - 240px)
+  height: calc(100% - 240px);
 }
 /* / MAIN BODY (Contents) */
 
