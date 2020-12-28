@@ -1,17 +1,20 @@
-// Order-name var input - definition
+// Order-name input - var definition
 var orderName = document.getElementsByClassName('order-name')[0].getElementsByTagName('input')[0];
 
-// Order-ingredients var inputs - definition
+// Order-ingredients inputs - var definition
 var orderIngredients = document.getElementsByClassName('order-ingredients')[0].getElementsByTagName('input');
 
-// Submit button var input - definition
+// Coupons array - var definition
+var coupons = ['JhLIv3HZ', '9M1rEw9u', '2RnQlJL7', 'ZtxB1Ile'];
+
+// Submit button input - var definition
 var submit = document.getElementsByClassName('order-submit')[0].getElementsByTagName('input')[0];
 
-// Footer containers vars - definition
+// Footer containers - vars definition
 var user = document.getElementById('user');
 var totalPrice = document.getElementById('price');
 
-// Undefined Vars - use them in the "Button after-click function"
+// Undefined vars - use them in the "Button after-click function"
 var checked;
 var coupon;
 var price;
@@ -35,20 +38,23 @@ submit.addEventListener("click", function() {
   // order name verification
   if (!orderName.value) {
     alert('Name your Burger, please!');
-  // ingredients quantity verificatio (2 or more)
+  // ingredients quantity verification (2 or more)
   } else if (checked.length < 2) {
     alert('Choose 2 or more ingredients');
   } else {
 
-    /* ----- alternative method to sum ingredients, using array -----
+    /* ----- Alternative method to sum ingredients, using array -----
     for (var i = 0; i < checked.length; i++) {
     choice += parseInt(checked[i]); }
     ----------------------------------------------------------------*/
 
     // assign here coupon value for refresh it, after every click
-    coupon = document.getElementById('coupon');
+    coupon = document.getElementById('coupon').value;
+
     // verify coupon code
-    if (coupon.value === 'M2ERRY0CHR2ISTM0AS') {
+    if (coupons.includes(coupon))
+    // if (coupons.indexOf(coupon) !== -1)   --- Alternative method ---
+     {
       discount = 8 + price - (price * 20 / 100);
       // print discounted price
       totalPrice.innerHTML = 'Eur.' + '<small><s> ' + parseInt(8 + price) + '</s>  (-20%)</small> ' + discount;
